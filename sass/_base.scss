@@ -10,12 +10,21 @@ $color-white: #fff;
 $color-black: #000;
 
 @keyframes seesaw {
-  0% { transform: rotate(0); }
-  25% { transform: rotate(5deg); }
-  50% { transform: rotate(0deg); }
-  75% { transform: rotate(-5deg); }
-  100% {transform: rotate(0deg); }
-
+  0% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
 *,
@@ -80,41 +89,42 @@ body {
     );
     width: 100%;
     height: 100%;
+    object-fit: cover; // ?? needed
     z-index: 10;
     grid-row: 1 / -1;
-    grid-column: 1/-1;
+    grid-column: 1 / -1;
 
     .nav {
       justify-content: flex-end;
     }
   }
 
-  &__item{
-      align-self: end;
-      font-size: 10rem; 
-      font-weight: 600;
-      &--1{
-        grid-row: 3/4;
-      }
-      &--2{
-        grid-row: 4/5;
-      }
+  &__item {
+    align-self: end;
+    font-size: 10rem;
+    font-weight: 600;
+    &--1 {
+      grid-row: 3/4;
+    }
+    &--2 {
+      grid-row: 4/5;
+    }
   }
 
   &__arrow {
     align-self: end;
     grid-row: 5/6;
 
-    &-text{
-        font-size: 2rem;
-        animation: seesaw 1s linear infinite;
+    &-text {
+      font-size: 2rem;
+      animation: seesaw 1s linear infinite;
     }
-    
+
     &-link:link,
     &-link:visited {
-        color: currentColor;
-        svg {
-            fill: currentColor;
+      color: currentColor;
+      svg {
+        fill: currentColor;
         height: 2rem;
         width: 2rem;
       }
@@ -122,18 +132,33 @@ body {
   }
 }
 
-.navbar{
-    opacity: 0;
-    transition: all .2s;
+.navbar {
+  opacity: 0;
+  transition: all 0.2s;
+  display: flex;
+  justify-content: space-around;
+  svg {
+    fill: $color-white;
+    height: 2rem;
+    width: 2rem;
+  }
 }
 
 .sticky {
   background-color: $color-black;
-  opacity: .5;
+  opacity: 0.5;
   z-index: 20;
   position: fixed;
   top: 0;
   width: 100%;
+  display: flex;
+  justify-content: space-around;
+  svg {
+    fill: $color-white;
+    opacity: 1;
+    height: 2rem;
+    width: 2rem;
+  }
 }
 .projects {
   grid-column: center-start / center-end;
