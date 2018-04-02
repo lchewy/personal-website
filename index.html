@@ -51,18 +51,27 @@
             </ul>
 
             <nav class="navbar" id="navbar">
-                <a href="#">about</a>
+                <a href="#">
+                    <svg>
+                        <use xlink:href="img/sprite.svg#icon-info-with-circle"></use>
+                    </svg>
+                </a>
+
                 <a href="#">
                     <svg>
                         <use xlink:href="img/sprite.svg#icon-home"></use>
                     </svg>
                 </a>
-                <a href="#">contact</a>
+                <a href="#">
+                    <svg>
+                        <use xlink:href="img/sprite.svg#icon-address-book"></use>
+                    </svg>
+                </a>
             </nav>
 
 
-            <p class="landing__item landing__item--1">Hi, I'm Leslie</p>
-            <p class="landing__item landing__item--2">I'm a web developer</p>
+            <p class="landing__item landing__item--1">it's me, Leslie</p>
+            <p class="landing__item landing__item--2">web developer</p>
 
             <div class="landing__arrow">
                 <p class="landing__arrow-text"> check me out</p>
@@ -77,18 +86,44 @@
 
     </header>
 
-    
+    <section class="about" id="about">
+        <h1 class="about__heading">My Skills</h1>
+        <p class="about__text">I got you bro!</p>
+
+        <div class="about__item about__item--1">
+            <svg class="about__item-icon">
+                <use xlink:href="img/sprite.svg#icon-nodejs"></use>
+            </svg>
+            <h2 class="about__item-heading">Node</h2>
+            <p class="about__item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem nisi ducimus cum </p>
+        </div>
+        <div class="about__item about__item--2">
+            <svg class="about__item-icon">
+                <use xlink:href="img/sprite.svg#icon-react"></use>
+            </svg>
+            <h2 class="about__item-heading">React</h2>
+            <p class="about__item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem nisi ducimus cum </p>
+        </div>
+        <div class="about__item about__item--3">
+            <svg class="about__item-icon">
+                <use xlink:href="img/sprite.svg#icon-database"></use>
+            </svg>
+            <h2 class="about__item-heading">SQL</h2>
+            <p class="about__item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem nisi ducimus cum </p>
+        </div>
+    </section>
 
     <section id="projects" class="projects">
-        <div class="project">
+        <h2 class="projects__heading">Projects</h2>
+        <a href="#" class="project">
             <img src="img/sorry.jpg" alt="project 1" class="project__img">
-        </div>
-        <div class="project">
+        </a>
+        <a href="#" class="project">
             <img src="img/sorry.jpg" alt="project 2" class="project__img">
-        </div>
-        <div class="project">
+        </a>
+        <a href="#" class="project">
             <img src="img/sorry.jpg" alt="project 3" class="project__img">
-        </div>
+        </a>
     </section>
 
     <footer class="footer">
