@@ -1,0 +1,17 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+.container {
+  display: grid;
+  grid-template-rows: 100vh repeat(4, min-content); }
+
+.nav-bar {
+  width: 100%; }
