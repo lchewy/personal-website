@@ -8,7 +8,7 @@ $color-grey-dark-3: #333;
 
 $color-white: #fff;
 $color-black: #000;
-$color-gold: #E5B53E;
+$color-gold: #e5b53e;
 
 @keyframes seesaw {
   0% {
@@ -166,7 +166,7 @@ body {
   }
 }
 
-.about{
+.about {
   grid-column: center-start / center-end;
   color: black;
   margin: 5rem 0;
@@ -179,54 +179,97 @@ body {
   justify-content: center;
   text-align: center;
 
-  &__heading{
+  &__heading {
     grid-column: 1 /-1;
     grid-row: 1 / 2;
     align-self: end;
   }
 
-  &__text{
+  &__text {
     grid-column: 1 /-1;
     grid-row: 2 / 3;
     align-self: start;
   }
 
-  &__item{
-    &-icon{
+  &__item {
+    &-icon {
       height: 5rem;
       width: 5rem;
     }
 
-    &-heading{
+    &-heading {
       font-size: 3rem;
     }
 
-    &-text{
+    &-text {
       font-size: 2rem;
     }
 
-    &--3{
-      svg {fill: $color-gold;}
+    &--3 {
+      svg {
+        fill: $color-gold;
+      }
     }
-
   }
 }
 
 .projects {
   background: $color-grey-light-2;
-  padding: 15rem 3rem;
+  padding: 5rem 3rem;
   // grid-column: center-start / center-end;
   grid-column: page-start / page-end;
 
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-  grid-gap: 7rem;
+  grid-template-rows: repeat(2, min-content);
+  grid-template-columns: repeat(3, minmax(25rem, 1fr));
+  grid-gap: 2rem 7rem;
+  text-align: center;
+  justify-content: center;
+
+  &__heading {
+    grid-column: 1 / -1;
+    color: $color-black;
+  }
 }
 .project {
-  background-color: salmon;
+  display: grid;
+
+  grid-template-rows: 100%;
+  grid-template-columns: 100%;
+  color: $color-white;
+  text-decoration: none;
+  overflow: hidden;
 
   &__img {
     width: 100%;
+    height: 100%;
+    grid-row: 1/-1;
+    grid-column: 1/-1;
+    object-fit: cover;
+    transition: all 0.5s ease;
+  }
+
+  &__caption {
+  
+    // vertical-align: center;
+    // background-image: linear-gradient( rgba($color-black, .5),rgba($color-black, 0.5));
+    grid-row: 1/-1;
+    grid-column: 1/-1;
+    opacity: 0;
+    // object-fit: cover;
+    transition: all 0.5s ease;
+    text-transform: uppercase;
+   
+  }
+
+  &:hover &__caption {
+    background-image: linear-gradient( rgba($color-black, .5),rgba($color-black, 0.5));
+    opacity: 1;
+    z-index: 100;
+  }
+
+  &:hover &__img {
+    transform: scale(1.2);  
   }
 }
 
