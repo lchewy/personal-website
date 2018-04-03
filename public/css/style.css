@@ -83,6 +83,35 @@ body {
       height: 2rem;
       width: 2rem; }
 
+.about {
+  grid-column: center-start / center-end;
+  color: black;
+  margin: 5rem 0;
+  display: grid;
+  grid-template-rows: repeat(2, min-content) minmax(25rem, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 2rem 7rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center; }
+  .about__heading {
+    grid-column: 1 /-1;
+    grid-row: 1 / 2;
+    align-self: end; }
+  .about__text {
+    grid-column: 1 /-1;
+    grid-row: 2 / 3;
+    align-self: start; }
+  .about__item-icon {
+    height: 5rem;
+    width: 5rem; }
+  .about__item-heading {
+    font-size: 3rem; }
+  .about__item-text {
+    font-size: 2rem; }
+  .about__item--3 svg {
+    fill: #e5b53e; }
+
 .navbar {
   opacity: 0;
   transition: all 0.2s;
@@ -113,42 +142,13 @@ body {
     height: 2rem;
     width: 2rem; }
 
-.about {
-  grid-column: center-start / center-end;
-  color: black;
-  margin: 5rem 0;
-  display: grid;
-  grid-template-rows: repeat(2, min-content) minmax(25rem, 1fr);
-  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-  grid-gap: 2rem 7rem;
-  align-items: center;
-  justify-content: center;
-  text-align: center; }
-  .about__heading {
-    grid-column: 1 /-1;
-    grid-row: 1 / 2;
-    align-self: end; }
-  .about__text {
-    grid-column: 1 /-1;
-    grid-row: 2 / 3;
-    align-self: start; }
-  .about__item-icon {
-    height: 5rem;
-    width: 5rem; }
-  .about__item-heading {
-    font-size: 3rem; }
-  .about__item-text {
-    font-size: 2rem; }
-  .about__item--3 svg {
-    fill: #e5b53e; }
-
 .projects {
   background: #eee;
   padding: 5rem 3rem;
   grid-column: page-start / page-end;
   display: grid;
-  grid-template-rows: min-content minmax(25rem, 1fr);
-  grid-template-columns: repeat(3, minmax(25rem, 1fr));
+  grid-template-rows: min-content minmax(30rem, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   grid-gap: 2rem 7rem;
   text-align: center;
   justify-content: center; }
@@ -201,7 +201,8 @@ body {
   grid-template-columns: 100%;
   text-align: center;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  overflow: hidden; }
 
 .nav {
   list-style: none;

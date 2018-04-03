@@ -1,0 +1,61 @@
+.projects {
+    background: $color-grey-light-2;
+    padding: 5rem 3rem;
+    grid-column: page-start / page-end;
+  
+    display: grid;
+    grid-template-rows: min-content minmax(30rem, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    grid-gap: 2rem 7rem;
+    text-align: center;
+    justify-content: center;
+  
+    &__heading {
+      grid-column: 1 / -1;
+      color: $color-black;
+    }
+  }
+  .project {
+    display: grid;
+  
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: 100%;
+    color: $color-white;
+    text-decoration: none;
+    overflow: hidden;
+  
+    &__img {
+      width: 100%;
+      height: 100%;
+      grid-row: 1/-1;
+      grid-column: 1/-1;
+      object-fit: cover;
+      transition: all 0.5s ease;
+    }
+  
+    &__caption {
+      align-self: stretch;
+      grid-row: 1/-1;
+      grid-column: 1/-1;
+      opacity: 0;
+      transition: all 0.5s ease;
+      text-transform: uppercase;
+      display:grid;
+      grid-template-rows: repeat(3, 1fr);
+      &-text{
+        grid-row: 2/3;
+        align-self: center;
+      }
+    }
+  
+    &:hover &__caption {
+      align-self: stretch;
+      background-image: linear-gradient( rgba($color-black, .5),rgba($color-black, 0.5));
+      opacity: 1;
+      z-index: 100;
+    }
+  
+    &:hover &__img {
+      transform: scale(1.2);  
+    }
+  }
