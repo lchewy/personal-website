@@ -74,21 +74,23 @@ body {
     align-self: end;
     grid-row: 5/6; }
     .landing__arrow-text {
+      cursor: pointer;
       font-size: 2rem;
       animation: seesaw 1s linear infinite; }
-    .landing__arrow-link:link, .landing__arrow-link:visited {
-      color: currentColor; }
-      .landing__arrow-link:link svg, .landing__arrow-link:visited svg {
-        fill: currentColor;
-        height: 2rem;
-        width: 2rem; }
+    .landing__arrow-icon {
+      cursor: pointer;
+      fill: currentColor;
+      height: 2rem;
+      width: 2rem; }
 
 .navbar {
   opacity: 0;
   transition: all 0.2s;
   display: flex;
-  justify-content: flex-end; }
-  .navbar svg {
+  justify-content: flex-end;
+  padding: 1.5rem; }
+  .navbar > svg {
+    pointer-events: none;
     margin-right: 3rem;
     fill: #fff;
     height: 2rem;
@@ -103,7 +105,9 @@ body {
   width: 100%;
   display: flex;
   justify-content: flex-end; }
-  .sticky svg {
+  .sticky > svg {
+    pointer-events: auto;
+    cursor: pointer;
     fill: #fff;
     opacity: 1;
     height: 2rem;
@@ -210,8 +214,11 @@ body {
     font-size: 1.4rem;
     color: currentColor;
     display: block;
-    padding: 1.5rem; }
+    padding: 1.5rem;
+    transition: all .1s; }
     .nav__link:link svg, .nav__link:visited svg {
       fill: currentColor;
       height: 2rem;
       width: 2rem; }
+  .nav__link:hover, .nav__link:active {
+    transform: scale(1.2); }

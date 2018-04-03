@@ -51,22 +51,22 @@
             </ul>
 
             <nav class="navbar" id="navbar">
-                <a href="#about">
-                    <svg>
+                <!-- <a href="#about"> -->
+                    <svg onclick="scrollAbout()">
                         <use xlink:href="public/img/sprite.svg#icon-info-with-circle"></use>
                     </svg>
-                </a>
+                <!-- </a> -->
 
-                <a href="#landing">
-                    <svg>
+                <!-- <a href="#landing"> -->
+                    <svg onclick="scrollLanding()">
                         <use xlink:href="public/img/sprite.svg#icon-home"></use>
                     </svg>
-                </a>
-                <a href="#footer">
-                    <svg>
+                <!-- </a> -->
+                <!-- <a href="#footer"> -->
+                    <svg onclick="scrollFooter()">
                         <use xlink:href="public/img/sprite.svg#icon-address-book"></use>
                     </svg>
-                </a>
+                <!-- </a> -->
             </nav>
 
 
@@ -74,12 +74,12 @@
             <p class="landing__item landing__item--2">web developer</p>
 
             <div class="landing__arrow">
-                <p class="landing__arrow-text"> check me out</p>
-                <a href="#projects" class="landing__arrow-link">
-                    <svg>
+                <p class="landing__arrow-text" onclick="scrollAbout()"> check me out</p>
+                <!-- <a href="#projects" class="landing__arrow-link"> -->
+                    <svg class="landing__arrow-icon" onclick="scrollAbout()">
                         <use xlink:href="public/img/sprite.svg#icon-chevron-thin-down"></use>
                     </svg>
-                </a>
+                <!-- </a> -->
             </div>
 
         </div>
