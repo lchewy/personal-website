@@ -69,6 +69,12 @@ body {
       grid-row: 3/4; }
     .landing__item--2 {
       grid-row: 4/5; }
+  @media only screen and (max-width: 43.75em) {
+    .landing__item {
+      font-size: 6rem; } }
+  @media only screen and (max-width: 31.25em) {
+    .landing__item {
+      font-size: 4rem; } }
   .landing__arrow {
     text-align: center;
     align-self: end;
